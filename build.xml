@@ -92,9 +92,9 @@
       </fileset>
     </copy>
   </target>
-  <!-- <target name="run" depends="install">
-    <echo message="app start Assignment in ${build.dir}" />
-    <java classname="introsde.assignment02.App" classpath="${build.dir}" fork="true">
+  <target name="start.endpoint" depends="install">
+    <echo message="Endpoint starting" />
+    <java classname="introsde.assignment.soap.endpoint.PeoplePublisher" classpath="${build.dir}" fork="true">
       <arg value="$JAVA_OPTS  -cp" />
       <classpath>
         <path location="build" />
@@ -104,8 +104,9 @@
         </fileset>
       </classpath>
     </java>
+    <echo message="Endpoint started" />
   </target>
-  <target name="start.client" depends="install">
+  <!-- <target name="start.client" depends="install">
     <echo message=">>>>>>>>>> Client App Starting" />
     <java classname="introsde.assignment02.client.ClientApp" classpath="${build.dir}" fork="true">
       <arg value="$JAVA_OPTS -cp" />
