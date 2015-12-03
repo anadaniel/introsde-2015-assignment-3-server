@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="introsde-jpa">
-    <class>introsde.assignment3.model.Person</class>
-    <class>introsde.assignment3.model.MeasureType</class>
-    <class>introsde.assignment3.model.Measure</class>
+    <class>introsde.assignment.soap.model.Person</class>
+    <class>introsde.assignment.soap.model.MeasureType</class>
+    <class>introsde.assignment.soap.model.Measure</class>
     <properties>
       <!-- Scan for annotated classes and Hibernate mapping XML files -->
       <property name="hibernate.archive.autodetection" value="class, hbm"/>

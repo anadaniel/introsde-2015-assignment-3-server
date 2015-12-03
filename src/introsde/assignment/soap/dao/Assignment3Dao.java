@@ -1,4 +1,4 @@
-package introsde.assignment3.dao;
+package introsde.assignment.soap.dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

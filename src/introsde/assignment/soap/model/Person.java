@@ -1,6 +1,6 @@
-package introsde.assignment3.model;
+package introsde.assignment.soap.model;
 
-import introsde.assignment3.dao.Assignment3Dao;
+import introsde.assignment.soap.dao.Assignment3Dao;
 
 import java.io.Serializable;
 import java.util.Date;
