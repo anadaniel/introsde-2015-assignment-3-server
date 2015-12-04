@@ -9,7 +9,6 @@ import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -26,7 +25,6 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @Table(name="Person") 
 @NamedQuery(name="Person.findAll", query="SELECT p FROM Person p")
-@XmlRootElement
 @XmlType(propOrder={"personId","firstname","lastname", "birthdate", "currentMeasures"})
 public class Person implements Serializable {
   private static final long serialVersionUID = 1L;

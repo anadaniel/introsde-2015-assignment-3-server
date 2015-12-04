@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -36,7 +35,6 @@ import javax.xml.bind.annotation.XmlTransient;
     query = "SELECT m FROM Measure m, MeasureType mt WHERE m.person.personId = :pid AND m.measureType.measureTypeId = mt.measureTypeId GROUP BY mt.measureTypeId"
   )
 })
-@XmlRootElement
 @XmlType(propOrder={"measureId","value","measureType","created"})
 public class Measure implements Serializable {
   private static final long serialVersionUID = 1L;

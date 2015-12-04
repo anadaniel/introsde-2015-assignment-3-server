@@ -6,7 +6,6 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlValue;
 
@@ -25,7 +24,6 @@ import javax.xml.bind.annotation.XmlValue;
   @NamedQuery(name="MeasureType.findAll", query="SELECT mt FROM MeasureType mt"),
   @NamedQuery(name="MeasureType.findFromName", query="SELECT mt FROM MeasureType mt WHERE mt.name = :name")
 })
-@XmlRootElement
 public class MeasureType implements Serializable {
   private static final long serialVersionUID = 1L;
 
