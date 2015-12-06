@@ -14,13 +14,13 @@ import javax.jws.soap.SOAPBinding.Use;
 @WebService
 @SOAPBinding(style = Style.DOCUMENT, use=Use.LITERAL)
 public interface People {
+  @WebMethod(operationName="getPeopleList")
+  @WebResult(name="people") 
+  public List<Person> getPeople();
+  
   @WebMethod(operationName="readPerson")
   @WebResult(name="person") 
   public Person readPerson(@WebParam(name="personId") int id);
-
-  // @WebMethod(operationName="getPeopleList")
-  // @WebResult(name="people") 
-  // public List<Person> getPeople();
 
   // @WebMethod(operationName="createPerson")
   // @WebResult(name="personId") 

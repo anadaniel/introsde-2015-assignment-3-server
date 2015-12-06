@@ -8,21 +8,16 @@ import javax.jws.WebService;
 
 @WebService(endpointInterface = "introsde.assignment.soap.ws.People", serviceName="PeopleService")
 public class PeopleImpl implements People {
+
   @Override
-  public Person readPerson(int id) {
-    Person person = Person.getPersonById(id);
-    if (person != null) {
-      System.out.println("---> Found Person by id = "+id+" => " + person.getFirstname());
-    } else {
-      System.out.println("---> Didn't find any Person with  id = "+id);
-    }
-    return person;
+  public List<Person> getPeople() {
+    return Person.getAll();
   }
 
-  // @Override
-  // public List<Person> getPeople() {
-  //   return Person.getAll();
-  // }
+  @Override
+  public Person readPerson(int id) {
+    return Person.getPersonById(id);
+  }
 
   // @Override
   // public int addPerson(Person person) {
