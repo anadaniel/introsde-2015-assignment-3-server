@@ -19,37 +19,12 @@ public class PeopleImpl implements People {
     return Person.getPersonById(id);
   }
 
-  // @Override
-  // public int addPerson(Person person) {
-  //   Person.savePerson(person);
-  //   return person.getIdPerson();
-  // }
-
-  // @Override
-  // public int updatePerson(Person person) {
-  //   Person.updatePerson(person);
-  //   return person.getIdPerson();
-  // }
-
-  // @Override
-  // public int deletePerson(int id) {
-  //   Person p = Person.getPersonById(id);
-  //   if (p!=null) {
-  //     Person.removePerson(p);
-  //     return 0;
-  //   } else {
-  //     return -1;
-  //   }
-  // }
-
-  // @Override
-  // public int updatePersonHP(int id, LifeStatus hp) {
-  //   LifeStatus ls = LifeStatus.getLifeStatusById(hp.getIdMeasure());
-  //   if (ls.getPerson().getIdPerson() == id) {
-  //     LifeStatus.updateLifeStatus(hp);
-  //     return hp.getIdMeasure();
-  //   } else {
-  //     return -1;
-  //   }
-  // }
+  @Override
+  public Person updatePerson(int id, Person person) {
+    Person old_person = Person.getPersonById(id);
+    if (old_person != null)
+      return Person.updatePerson(old_person, person);
+    else
+      return old_person;
+  }
 }
