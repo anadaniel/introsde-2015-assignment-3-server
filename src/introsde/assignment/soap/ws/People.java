@@ -36,4 +36,8 @@ public interface People {
   @WebMethod(operationName="getPersonHistory")
   @WebResult(name="measures")
   public List<Measure> getPersonHistory(@WebParam(name="personId") int id, @WebParam(name="measureType") String measureType);
+
+  @WebMethod(operationName="getMeasureTypes")
+  @WebResult(name="measureTypes")
+  public List<MeasureType> getMeasureTypes();
 }

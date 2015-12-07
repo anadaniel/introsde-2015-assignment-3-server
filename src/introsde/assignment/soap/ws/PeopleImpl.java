@@ -43,4 +43,9 @@ public class PeopleImpl implements People {
   public List<Measure> getPersonHistory(int id, String measureType) {
     return Measure.getMeasuresFromPerson(id, measureType);
   }
+
+  @Override
+  public List<MeasureType> getMeasureTypes() {
+    return MeasureType.getAll();
+  }
 }
