@@ -44,4 +44,8 @@ public interface People {
   @WebMethod(operationName="getMeasure")
   @WebResult(name="measure")
   public Measure getMeasure(@WebParam(name="measureId") int id);
+
+  @WebMethod(operationName="updateMeasure")
+  @WebResult(name="updatedMeasure")
+  public Measure updateMeasure(@WebParam(name="measureId") int id, @WebParam(name="measure") Measure measure);
 }

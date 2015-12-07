@@ -53,4 +53,13 @@ public class PeopleImpl implements People {
   public Measure getMeasure(int measureId) {
     return Measure.getMeasureById(measureId);
   }
+
+  @Override
+  public Measure updateMeasure(int id, Measure measure) {
+    Measure old_measure = Measure.getMeasureById(id);
+    if (old_measure != null)
+      return Measure.updateMeasure(old_measure, measure);
+    else
+      return old_measure;
+  }
 }
