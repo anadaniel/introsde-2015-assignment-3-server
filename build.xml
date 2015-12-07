@@ -92,7 +92,7 @@
       </fileset>
     </copy>
   </target>
-  <target name="start.endpoint" depends="install">
+  <target name="run" depends="install">
     <echo message="Endpoint starting" />
     <java classname="introsde.assignment.soap.endpoint.PeoplePublisher" classpath="${build.dir}" fork="true">
       <arg value="$JAVA_OPTS  -cp" />
