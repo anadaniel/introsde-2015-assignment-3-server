@@ -29,4 +29,7 @@ public interface People {
   @WebMethod(operationName="createPerson")
   @WebResult(name="createdPerson")
   public Person createPerson(@WebParam(name="person") Person person);
+
+  @WebMethod(operationName="deletePerson")
+  public void deletePerson(@WebParam(name="personId") int id);
 }

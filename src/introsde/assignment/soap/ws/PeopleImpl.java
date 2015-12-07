@@ -32,4 +32,10 @@ public class PeopleImpl implements People {
   public Person createPerson(Person person) {
     return Person.createPerson(person);
   }
+
+  @Override
+  public void deletePerson(int id) {
+    Person person = Person.getPersonById(id);
+    Person.deletePerson(person);
+  }
 }
