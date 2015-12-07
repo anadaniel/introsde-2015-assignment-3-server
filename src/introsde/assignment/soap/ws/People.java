@@ -40,4 +40,8 @@ public interface People {
   @WebMethod(operationName="getMeasureTypes")
   @WebResult(name="measureTypes")
   public List<MeasureType> getMeasureTypes();
+
+  @WebMethod(operationName="getMeasure")
+  @WebResult(name="measure")
+  public Measure getMeasure(@WebParam(name="measureId") int id);
 }

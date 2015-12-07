@@ -48,4 +48,9 @@ public class PeopleImpl implements People {
   public List<MeasureType> getMeasureTypes() {
     return MeasureType.getAll();
   }
+
+  @Override
+  public Measure getMeasure(int measureId) {
+    return Measure.getMeasureById(measureId);
+  }
 }
