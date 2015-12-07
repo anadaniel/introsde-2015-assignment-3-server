@@ -27,4 +27,9 @@ public class PeopleImpl implements People {
     else
       return old_person;
   }
+
+  @Override
+  public Person createPerson(Person person) {
+    return Person.createPerson(person);
+  }
 }

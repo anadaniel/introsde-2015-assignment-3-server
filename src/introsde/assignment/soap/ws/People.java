@@ -25,4 +25,8 @@ public interface People {
   @WebMethod(operationName="updatePerson")
   @WebResult(name="updatedPerson")
   public Person updatePerson(@WebParam(name="personId") int id, @WebParam(name="person") Person person);
+
+  @WebMethod(operationName="createPerson")
+  @WebResult(name="createdPerson")
+  public Person createPerson(@WebParam(name="person") Person person);
 }
