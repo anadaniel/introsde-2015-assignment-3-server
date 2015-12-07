@@ -38,4 +38,9 @@ public class PeopleImpl implements People {
     Person person = Person.getPersonById(id);
     Person.deletePerson(person);
   }
+
+  @Override
+  public List<Measure> getPersonHistory(int id, String measureType) {
+    return Measure.getMeasuresFromPerson(id, measureType);
+  }
 }

@@ -15,7 +15,7 @@ import javax.jws.soap.SOAPBinding.Use;
 @SOAPBinding(style = Style.DOCUMENT, use=Use.LITERAL)
 public interface People {
   @WebMethod(operationName="getPeopleList")
-  @WebResult(name="people") 
+  @WebResult(name="people")
   public List<Person> getPeople();
   
   @WebMethod(operationName="readPerson")
@@ -32,4 +32,8 @@ public interface People {
 
   @WebMethod(operationName="deletePerson")
   public void deletePerson(@WebParam(name="personId") int id);
+
+  @WebMethod(operationName="getPersonHistory")
+  @WebResult(name="measures")
+  public List<Measure> getPersonHistory(@WebParam(name="personId") int id, @WebParam(name="measureType") String measureType);
 }
