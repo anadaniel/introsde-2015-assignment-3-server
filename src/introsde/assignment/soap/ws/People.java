@@ -45,7 +45,12 @@ public interface People {
   @WebResult(name="measure")
   public Measure getMeasure(@WebParam(name="measureId") int id);
 
+  @WebMethod(operationName="createMeasure")
+  @WebResult(name="createMeasure")
+  public Measure createMeasure(@WebParam(name="measure") Measure measure, @WebParam(name="personId") int personId, @WebParam(name="measureType") String measureType);
+
   @WebMethod(operationName="updateMeasure")
   @WebResult(name="updatedMeasure")
   public Measure updateMeasure(@WebParam(name="measureId") int id, @WebParam(name="measure") Measure measure);
+
 }
